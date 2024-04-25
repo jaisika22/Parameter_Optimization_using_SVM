@@ -2,13 +2,16 @@
 
 ## Methodology
 
-### 1. Data Preprocessing: The dataset is loaded from a CSV file. 
+### 1. Data Preprocessing: 
+The dataset is loaded from a CSV file. 
 Missing values are handled. 
 Graph is made for analysis.
 
-### 2. Feature Scaling: Standardization is applied to the feature variables using StandardScaler to bring them onto the same scale.
+### 2. Feature Scaling: 
+Standardization is applied to the feature variables using StandardScaler to bring them onto the same scale.
 
-### 3. Model Training and Evaluation: The dataset is split into training and testing sets using a 70-30 split and this process is repeated 10 times with different random states to generate multiple samples for cross-validation.For each sample, SVM models with different kernels ( 'sigmoid', 'poly', 'rbf', 'linear') are trained with randomly chosen hyperparameters (kernel, epsilon and nu) using a custom fitness function based on accuracy score.The best performing model (with the highest accuracy) for each sample is recorded along with its hyperparameters. 
+### 3. Model Training and Evaluation: 
+The dataset is split into training and testing sets using a 70-30 split and this process is repeated 10 times with different random states to generate multiple samples for cross-validation.For each sample, SVM models with different kernels ( 'sigmoid', 'poly', 'rbf', 'linear') are trained with randomly chosen hyperparameters (kernel, epsilon and nu) using a custom fitness function based on accuracy score.The best performing model (with the highest accuracy) for each sample is recorded along with its hyperparameters. 
 A DataFrame (result_df) is created to store the results (sample number, best accuracy, best kernel, best epsi value, best nu value).
 Finally, the model with the best accuracy across all samples is selected and its learning curve is plotted to visualize the convergence of accuracy with respect to the number of training iterations.
 
@@ -28,9 +31,12 @@ Finally, the model with the best accuracy across all samples is selected and its
 |9|S10|0\.9492446978359635|0\.1324327539307883|0\.6082372206790093|linear|
 
 ### Convergence of Best SVM Model:
+
 ![image](https://github.com/jaisika22/Parameter_Optimization_using_SVM/assets/107528387/8347f500-3f10-4434-8649-38700cc4a827)
 
 ### Iteration vs Accuracy:
+
 ![image](https://github.com/jaisika22/Parameter_Optimization_using_SVM/assets/107528387/3f1831b6-778b-4ad0-ac57-5e603c49c418)
+
 
 Note: The results may vary as the code works on random choices
